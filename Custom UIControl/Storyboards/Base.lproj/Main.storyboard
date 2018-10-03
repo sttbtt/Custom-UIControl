@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezX-5E-i2d">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Custom_UIControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="pGn-qh-72D" customClass="CustomControl" customModule="Custom_UIControl" customModuleProvider="target">
+                                <rect key="frame" x="67.666666666666686" y="342" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateRating:" destination="BYZ-38-t0r" eventType="valueChanged" id="JME-fU-928"/>
+                                </connections>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Solo_A_Star_Wars_Story_poster" translatesAutoresizingMaskIntoConstraints="NO" id="WAz-4R-vPP">
+                                <rect key="frame" x="101" y="94" width="173" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="8id-dy-erM"/>
+                                    <constraint firstAttribute="width" constant="173" id="Xgz-5E-sIj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WAz-4R-vPP" secondAttribute="trailing" constant="101" id="3nv-kO-il6"/>
+                            <constraint firstItem="WAz-4R-vPP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="CAQ-7i-b9k"/>
+                            <constraint firstItem="pGn-qh-72D" firstAttribute="top" secondItem="WAz-4R-vPP" secondAttribute="bottom" constant="8" symbolic="YES" id="CTu-E4-00l"/>
+                            <constraint firstItem="pGn-qh-72D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="b2U-mt-nfx"/>
+                            <constraint firstItem="pGn-qh-72D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bew-cv-sZw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lad-Qz-WAv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="792.85714285714289"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OS3-w1-q13">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ezX-5E-i2d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1QN-Qe-BOs">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uJ7-Fw-TpF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAm-XS-bOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Solo_A_Star_Wars_Story_poster" width="78.939498901367188" height="117"/>
+    </resources>
+</document>
